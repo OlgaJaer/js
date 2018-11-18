@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="wrap"></div>
+  <script>
+    const elem1 = document.createElement('div');
+    const container = document.querySelector('#wrap');
+
+    container.appendChild(elem1);
+    elem1.textContent = 'Этот элемент создан при помощи DOM API';
+
+    const elem2 = document.createElement('div');
+    elem2.classList.add('inner');
+    elem2.textContent = 'Этот элемент тоже создан при помощи DOM API';
+    elem1.appendChild(elem2);
+
+    elem1.style.color = 'red';
+
+    elem1.addEventListener('click', function () {
+      console.log('Этот текст говорит о том, что я всё сделал правильно');
+    });
+
+    const link = document.createElement('a');
+    link.setAttribute('href', 'https://loftschool.com');
+    const target = link.getAttribute('href');
+    container.appendChild(link);
+    link.textContent = 'loftschool';
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      console.log('Я кликнул на ссылку ' + target);
+    });
+
+    const input = document.createElement('input');
+    const sendButton = document.createElement('button');
+
+    document.body.appendChild(input);
+    document.body.appendChild(sendButton);
+    sendButton.textContent = 'Отправить';
+    input.setAttribute('type', 'text');
+    input.setAttribute('name', 'content');
+
+
+    sendButton.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      console.log(input.value);
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>

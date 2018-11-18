@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*   var text = ['Привет,', 'Loftschool!'];
+    text.push('Я изучаю', 'JavaScript.');
+    console.log(text.length);
+    for (var i = 0; i < text.length; i++) {
+      console.log(text[i]);
+    }*/
+
+    /* var a = [1, 220, 13, 204, 25, 36, 777, 89, 19, 101];
+     for (var j = 0; j < a.length; j++) {
+       if (a[j] > 100) {
+         console.log(a[j]);
+       }
+     }*/
+
+    var obj = {
+      name: 'Ольга',
+      lastName: 'Егер',
+      age: 49
+    }
+    console.log(obj.name);
+    console.log(obj.lastName);
+    console.log(obj.age);
+
+    obj.name = 'Вера';
+    obj.lastName = 'Петрашева';
+    obj.age = 25;
+
+    console.log(obj.name);
+    console.log(obj.lastName);
+    console.log(obj.age);
+
+    function hello(human) {
+      return screen = ('Привет, меня зовут ' + human.name + ' ' + human.lastName + ' и мне ' + human.age + ' лет!');
+    }
+    hello({
+      name: 'Ольга',
+      lastName: 'Егер',
+      age: 49
+    });
+    hello(obj);
+    var screen
+    console.log(screen);
+  </script>
+</body>
+
+</html>

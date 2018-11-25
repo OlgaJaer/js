@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="wrap"></div>
+  <script>
+    function filter(input, than) {
+      var newArray = [];
+
+      if (input.length === 0) {
+        throw new Error('Передан пустой массив');
+      }
+
+      for (var j = 0; j < input.length; j++) {
+        if (isNaN(input[j])) {
+          throw new Error(input[j].toString() + ' не является числом');
+        }
+
+        if (input[j] < 0) {
+          throw new Error(input[j].toString() + ' меньше нуля');
+        }
+
+        if (input[j] > than) {
+          newArray.push(input[j]);
+          console.log(input[j]);
+        }
+      }
+      return newArray;
+    }
+
+    var array = [12, 100, 34, 65, 10];
+
+    var result = filter(array, 60)
+
+    result = filter(array, 20);
+  </script>
+</body>
+
+</html>
+
+//Возьмите код предыдущего задания
